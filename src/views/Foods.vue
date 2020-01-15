@@ -1,9 +1,13 @@
 <template>
-       <section id="not-a-burger" style="@background-image:url(burger.image)">
+<div>
+       <section
+       v-for="food in foods [$route.params.food]" 
+       :key="food.title"
+       :style="{backgroundImage: 'url(' + food.image + ')'}">
         <div class="image">
         </div>
         <div class="text">
-          <h2>{{burger.title}}</h2>
+          <h2>{{food.title}}</h2>
           <div class="icons">
             <div>
               <i class="fas fa-apple-alt"></i>
@@ -17,9 +21,10 @@
             </div>
             <i class="far fa-clock"></i>
           </div>
-          <p>{{burger.text}}</p>
+          <p>{{food.text}}</p>
         </div>
       </section>
+      </div>
 </template>
 
 <script>
@@ -30,8 +35,8 @@ export default {
     }
   },
   computed:{
-  burger(){
-    return this.$store.state.burger
+  foods(){
+    return this.$store.state.foods
   }
 }
 }

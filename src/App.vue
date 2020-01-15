@@ -11,9 +11,9 @@
       <aside>
         <nav>
           <router-link to="/">Home</router-link>
-          <router-link to="/burgers">Burgers</router-link>
-              <router-link to="/soups">Soups</router-link>
-                  <router-link to="/desserts">Desserts</router-link>
+          <router-link to="/foods/burgers">Burgers</router-link>
+              <router-link to="/foods/soups">Soups</router-link>
+                  <router-link to="/foods/desserts">Desserts</router-link>
         </nav>
       </aside>
     </article>
